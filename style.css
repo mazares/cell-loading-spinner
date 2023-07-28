@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #555, #222);
+  color: #ddd;
+}
+
+.spinner,
+.spinner1,
+.spinner2,
+.spinner3,
+.spinner4,
+.spinner5,
+.spinner6,
+.spinner7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.spinner {
+  background: radial-gradient(
+    circle at 60%,
+    rgba(255, 254, 254, 0.8),
+    transparent,
+    rgba(17, 17, 17, 0.4)
+  );
+  scale: 0.7;
+  border-radius: 50%;
+  box-shadow: -30px -5px 50px #222;
+  animation: filter 1.2s infinite alternate;
+}
+
+.spinner1 {
+  height: 100px;
+  width: 100px;
+  border-right: 14px solid rgb(255, 0, 0);
+  animation: rotation 2s infinite linear;
+}
+
+.spinner2 {
+  height: 90px;
+  width: 90px;
+  border-right: 12px solid rgb(255, 128, 0);
+  animation: rotation 2s infinite alternate-reverse;
+}
+
+.spinner3 {
+  height: 80px;
+  width: 80px;
+  border-right: 10px solid rgb(255, 238, 0);
+  animation: rotation 2s infinite linear;
+}
+
+.spinner4 {
+  height: 70px;
+  width: 70px;
+  border-right: 8px solid rgb(80, 255, 0);
+  animation: rotation 2s infinite alternate-reverse;
+}
+
+.spinner5 {
+  height: 60px;
+  width: 60px;
+  border-right: 6px solid rgb(0, 208, 255);
+  animation: rotation 2s infinite linear;
+}
+
+.spinner6 {
+  height: 50px;
+  width: 50px;
+  border-right: 4px solid rgb(153, 0, 255);
+  animation: rotation 2s infinite alternate-reverse;
+}
+
+.spinner7 {
+  height: 40px;
+  width: 40px;
+  border-right: 2px solid rgb(255, 0, 225);
+  animation: rotation 2s infinite linear;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(0.1rem);
+  background: radial-gradient(
+    circle at 80%,
+    rgba(221, 221, 221, 0.8),
+    transparent,
+    rgba(1, 1, 1, 0.4)
+  );
+  rotate: 235deg;
+  box-shadow: -30px -5px 20px #2222228e;
+}
+
+@keyframes filter {
+  from {
+    filter: blur(0rem);
+  }
+  to {
+    filter: blur(1.5rem);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
